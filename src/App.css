@@ -1,0 +1,233 @@
+/* Copyright (c) 2025 by Leonam Silva de Souza (https://codepen.io/leonam-silva-de-souza/pen/zxOBmoe) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --header-height: 3rem;
+  --font-medium: 500;
+
+  --first-color: #5361ff;
+  --white-color: #fafaff;
+  --dark-color: #2a3b47;
+  --text-color: #697477;
+
+  --body-font: "Montserrat", sans-serif;
+  --big-font-size: 6.25rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  --mb1: 0.5rem;
+  --mb2: 1rem;
+  --mb3: 1.5rem;
+  --mb4: 2rem;
+
+  --z-fixed: 100;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 10.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  position: relative;
+  font-size: var(--h2-font-size);
+  color: var(--dark-color);
+  margin: var(--mb4) 0;
+  text-align: center;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 0.18rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 2rem;
+  background-color: var(--first-color);
+}
+
+.bd-grid {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb2);
+  margin-right: var(--mb2);
+}
+
+
+
+/* Light rejim uchun asosiy stillar */
+.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header-bg: #f3f3f3;
+}
+
+/* Dark rejim uchun asosiy stillar */
+.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --header-bg: #1e1e1e;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+header {
+  background-color: var(--header-bg);
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    flex-direction: column;
+  }
+  .section {
+    padding-top: 4rem;
+  }
+  .section-title {
+    margin-bottom: 3rem;
+  }
+  .section-title::after {
+    width: 64px;
+    top: 3rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1rem);
+  }
+  .nav-list {
+    display: flex;
+  }
+  .nav-item {
+    margin-left: var(--mb4);
+    margin-bottom: 0;
+  }
+
+  .nav-link {
+    color: var(--white-color);
+  }
+  .nav-link:hover {
+    color: var(--white-color);
+  }
+  .active::after {
+    background-color: var(--white-color);
+  }
+
+  .home-container {
+    height: 100vh;
+    grid-template-rows: 1.7fr 1fr;
+    row-gap: 0;
+  }
+  .home-img {
+    width: 524px;
+    right: 10%;
+  }
+
+  .about-container {
+    /* grid-template-columns: repeat(2, 1fr); */
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  .about-img {
+    
+    margin-left: 250px;
+  }
+  .about-img img {
+    width: 165px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+
+  .contact-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .contact-form {
+    width: 380px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

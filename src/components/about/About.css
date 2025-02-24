@@ -1,0 +1,41 @@
+.about-container {
+    justify-items: center;
+    row-gap: 2rem;
+    text-align: center;
+  }
+  
+  .about-img {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-left: 10px;
+    width: 420px;
+    height: 180px;
+    color: #fff;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 200px;
+  }
+  
+  .about-img img {
+    width: 100px;
+  }
+  
+  .about-subtitle {
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    margin-bottom: var(--mb1);
+  }
+ 
+  .about-profession {
+    display: block;
+    margin-bottom: var(--mb4);
+  }
+  .about-social-icon {
+    font-size: 1.4rem;
+    margin: 0 var(--mb1);
+  }
+  .about-social-icon:hover {
+    color: var(--first-color);
+  }

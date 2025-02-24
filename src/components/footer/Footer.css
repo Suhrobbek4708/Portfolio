@@ -1,0 +1,25 @@
+.footer {
+    background-color: var(--dark-color);
+  }
+  .footer-container {
+    row-gap: 2rem;
+  }
+  .footer-title {
+    font-size: var(--normal-font-size);
+    color: var(--white-color);
+    margin-bottom: var(--mb2);
+  }
+  .footer-link {
+    padding: 0.25rem 0;
+  }
+  .footer-link:hover {
+    color: var(--first-color);
+  }
+  
+  .footer-social {
+    font-size: 1.4rem;
+    margin-right: var(--mb1);
+  }
+  .footer-social:hover {
+    color: var(--first-color);
+  }
