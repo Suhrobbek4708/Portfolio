@@ -92,8 +92,15 @@ const App = () => {
     sr.reveal(".contact-button", { delay: 100 });
   }, []);
 
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hidden');
+  }, )
+
   return (
     <div>
+
+{/* <div className="loader"></div> */}
+
       <Header />
       <ResumeDownload />
 

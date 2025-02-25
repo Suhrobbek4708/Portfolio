@@ -26,6 +26,29 @@
 
 
 
+
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #333;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 3s linear forwards;
+  margin: 100px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(1080deg); } /* 3 soniyada 3 marta to'liq aylanish */
+}
+
+.hidden {
+  display: none;
+}
+
+
+
 @media screen and (min-width: 768px) {
   :root {
     --big-font-size: 10.5rem;
