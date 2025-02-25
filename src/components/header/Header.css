@@ -27,8 +27,16 @@
     color: #fff;
 
   }
+
+
+
+  .nav-link.active{
+    color: red;
+    cursor: pointer;
+  }
   .nav-link:hover {
     color: red;
+    text-decoration: underline red;
   }
   .nav-logo {
     color: #fff;

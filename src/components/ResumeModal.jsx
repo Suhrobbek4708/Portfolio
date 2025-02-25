@@ -4,8 +4,8 @@ import "./ResumeModal.css"
 const ResumeDownload = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/portfolio.pdf.pdf"; // public papkadagi PDF fayl
-    link.download = "portfolio_resume.pdf";
+    link.href = "./portfolio2.pdf"; // public papkadagi PDF fayl
+    link.download = "/portfolio2.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

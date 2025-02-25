@@ -13,8 +13,12 @@
     padding: 0.25rem 0;
   }
   .footer-link:hover {
+ 
     color: var(--first-color);
+
   }
+
+ 
   
   .footer-social {
     font-size: 1.4rem;
@@ -22,4 +26,5 @@
   }
   .footer-social:hover {
     color: var(--first-color);
+
   }
